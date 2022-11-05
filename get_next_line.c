@@ -16,38 +16,40 @@
 
 char *get_next_line(int fd)
 {
-    char *buff = NULL;
+    static char *buff = NULL;
     static char tmp[BUFFER_SIZE + 1];
     int i = 0;
     int count = read(fd, tmp, BUFFER_SIZE);
     int stope = 1;
     tmp[BUFFER_SIZE] = '\0';
-    if (!buff == NULL)
+    if (buff != NULL)
         buff = ft_strjoin(buff, tmp);
     else
         buff = ft_strdup(tmp);
     while (stope)
     {
-        i += ft_strchr(tmp, '\n');
-        if (ft_strchr(tmp, '\n') != -1)
+        i = ft_strchr(buff, '\n');
+        if (i != -1)
         {
-            printf("|%d|\n", i);
-            printf("|%d|\n", i);
-            //buff = ft_substr(buff, i, ft_strlen(buff) - i);
-            return(ft_substr(buff, 0, i));
+            char *s1 = ft_substr(buff, 0, i);
+            buff = ft_substr(buff, i + 1, count - i);
+            return (s1);
         }
-        i += BUFFER_SIZE + 1;
-        //i += BUFFER_SIZE + 1;
-        count = read(fd, tmp, BUFFER_SIZE);
+        count += read(fd, tmp, BUFFER_SIZE) + 1;
         buff = ft_strjoin(buff, tmp);
     }
     return ("(null)");
 }
 
-int main()
-{
-    int fd = open("text.txt", O_RDONLY);
-    printf("result = |%s|\n", get_next_line(fd));
-    printf("result = |%s|\n", get_next_line(fd));
-    printf("result = |%s|\n", get_next_line(fd));
-}
+// int main()
+// {
+//     int fd = open("text.txt", O_RDONLY);
+
+//     printf("line1 = %s\n", get_next_line(fd));
+//     printf("\n\n\n");
+//     printf("line2 = %s\n", get_next_line(fd));
+//     printf("\n\n\n");
+//     printf("line3 = %s\n", get_next_line(fd));
+//     printf("\n\n\n");
+//     printf("line4 = %s\n", get_next_line(fd));
+// }
