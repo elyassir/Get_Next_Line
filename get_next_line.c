@@ -24,7 +24,9 @@ char *get_next_line(int fd)
     int count = read(fd, tmp, BUFFER_SIZE);
     if (count <= 0 || fd < 0 || BUFFER_SIZE <= 0)
         return (NULL);
+    tmp[BUFFER_SIZE] = 0;
     //printf("%d\n", count);
+    //printf("%s\n", tmp);
     if (!tmp[0])
         buff = ft_strjoin(buff, tmp);
     else // khawi
@@ -33,6 +35,7 @@ char *get_next_line(int fd)
     while (count)
     {
         search = ft_strchr(buff, '\n');
+        //printf("search = %d\n", search);
         if (search != -1 || count2 == 0)
         {
             char *s1;
@@ -47,8 +50,9 @@ char *get_next_line(int fd)
         }
         count += count2;
         count2 = read(fd, tmp, BUFFER_SIZE);
-        if (count2 < 0) // there is nothing to read 
+        if (count2 < 0)
             return (NULL);
+        if (count2 != 0)
         buff = ft_strjoin(buff, tmp);
     }
 
@@ -57,7 +61,7 @@ char *get_next_line(int fd)
 
 // int main()
 // {
-//     int fd = open("files/nl", O_RDWR);
+//     int fd = open("files/41_with_nl", O_RDWR);
 
 //     printf("line1 = |%s|\n", get_next_line(fd));
 //     printf("\n");

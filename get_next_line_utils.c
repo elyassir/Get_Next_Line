@@ -72,6 +72,7 @@ char	*ft_strdup(const char *s1)
 	char	*str;
 
 	i = 0;
+	//printf("NO\n");
 	while (s1[i])
 		i++;
 	str = malloc(i * sizeof(char) + 1);

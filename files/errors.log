@@ -1,0 +1,392 @@
+Error in test 1: get_next_line(5: "one_line_no_nl.txt"): expected: "abcdefghijklmnopqrstuvwxyz", got: "abcdefghijklmnopqrstuvwxyzqrstuvwxy"
+Error in test 2: get_next_line(5: "multiple_nl.txt"): expected: "\n", got: <NULL>
+Error in test 2: get_next_line(5: "multiple_nl.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 3: get_next_line(5: "multiple_nl.txt"): expected: "\n", got: <NULL>
+Error in test 3: get_next_line(5: "multiple_nl.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 4: get_next_line(5: "multiple_nl.txt"): expected: "\n", got: <NULL>
+Error in test 4: get_next_line(5: "multiple_nl.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 5: get_next_line(5: "multiple_nl.txt"): expected: "\n", got: <NULL>
+Error in test 5: get_next_line(5: "multiple_nl.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 2: get_next_line(5: "variable_nls.txt"): expected: "0123456789012345678901234567890123456789x2\n", got: "9012345678901234567890123456789x2\n"
+Error in test 2: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 44, reserved: 35
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_substr get_next_line_utils.c:104:4
+     in get_next_line get_next_line.c:42:20
+     in test_gnl_func file_utils.c:31:8
+     in main tester.c:117:2
+
+should reserve space for the string: "0123456789012345678901234567890123456789x2\n"
+Error in test 3: get_next_line(5: "variable_nls.txt"): expected: "0123456789012345678901234567890123456789x3\n", got: "6789012345678901234567890123456789x3\n"
+Error in test 3: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 44, reserved: 38
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_substr get_next_line_utils.c:104:4
+     in get_next_line get_next_line.c:42:20
+     in test_gnl_func file_utils.c:31:8
+     in main tester.c:117:2
+
+should reserve space for the string: "0123456789012345678901234567890123456789x3\n"
+Error in test 4: get_next_line(5: "variable_nls.txt"): expected: "\n", got: "23456789012345678901234567890123456789x5\n"
+Error in test 5: get_next_line(5: "variable_nls.txt"): expected: "0123456789012345678901234567890123456789x5\n", got: "789012345678901234567890123456789x8\n"
+Error in test 5: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 44, reserved: 37
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_substr get_next_line_utils.c:104:4
+     in get_next_line get_next_line.c:42:20
+     in test_gnl_func file_utils.c:31:8
+     in main tester.c:117:2
+
+should reserve space for the string: "0123456789012345678901234567890123456789x5\n"
+Error in test 6: get_next_line(5: "variable_nls.txt"): expected: "\n", got: "123456789012345678901234567890123456789x123456789x1"
+Error in test 7: get_next_line(5: "variable_nls.txt"): expected: "\n", got: <NULL>
+Error in test 7: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 8: get_next_line(5: "variable_nls.txt"): expected: "0123456789012345678901234567890123456789x8\n", got: <NULL>
+Error in test 8: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 44, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "0123456789012345678901234567890123456789x8\n"
+Error in test 9: get_next_line(5: "variable_nls.txt"): expected: "\n", got: <NULL>
+Error in test 9: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 10: get_next_line(5: "variable_nls.txt"): expected: "\n", got: <NULL>
+Error in test 10: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 11: get_next_line(5: "variable_nls.txt"): expected: "\n", got: <NULL>
+Error in test 11: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 12: get_next_line(5: "variable_nls.txt"): expected: "0123456789012345678901234567890123456789x12", got: <NULL>
+Error in test 12: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 44, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "0123456789012345678901234567890123456789x12"
+Error in test 2: get_next_line(5: "lines_around_10.txt"): expected: "012345678\n", got: "\n"
+Error in test 2: get_next_line(5: "lines_around_10.txt"): not enough memory allocated, needed: 11, reserved: 2
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_substr get_next_line_utils.c:104:4
+     in get_next_line get_next_line.c:42:20
+     in test_gnl_func file_utils.c:31:8
+     in main tester.c:134:2
+
+should reserve space for the string: "012345678\n"
+Error in test 3: get_next_line(5: "lines_around_10.txt"): expected: "90123456789\n", got: "89\n"
+Error in test 3: get_next_line(5: "lines_around_10.txt"): not enough memory allocated, needed: 13, reserved: 4
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_substr get_next_line_utils.c:104:4
+     in get_next_line get_next_line.c:42:20
+     in test_gnl_func file_utils.c:31:8
+     in main tester.c:134:2
+
+should reserve space for the string: "90123456789\n"
+Error in test 4: get_next_line(5: "lines_around_10.txt"): expected: "0123456789\n", got: "789\n"
+Error in test 4: get_next_line(5: "lines_around_10.txt"): not enough memory allocated, needed: 12, reserved: 5
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_substr get_next_line_utils.c:104:4
+     in get_next_line get_next_line.c:42:20
+     in test_gnl_func file_utils.c:31:8
+     in main tester.c:134:2
+
+should reserve space for the string: "0123456789\n"
+Error in test 5: get_next_line(5: "lines_around_10.txt"): expected: "xxxx\n", got: <NULL>
+Error in test 5: get_next_line(5: "lines_around_10.txt"): not enough memory allocated, needed: 6, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "xxxx\n"
+Error in test 1: get_next_line(5: "giant_line.txt"): expected: "01234567890123456789[...]01234567890123456789"(20000 characters), got: "01234567890123456789[...]90123456789012345678"(20009 characters)
+Error in test 2: get_next_line(5: "giant_line_nl.txt"): expected: "another line!!!", got: "ine!!!er li"
+Error in test 2: get_next_line(5: "giant_line_nl.txt"): not enough memory allocated, needed: 16, reserved: 12
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_substr get_next_line_utils.c:104:4
+     in get_next_line get_next_line.c:40:20
+     in test_gnl_func file_utils.c:31:8
+     in main tester.c:152:2
+
+should reserve space for the string: "another line!!!"
+Error in test 2: get_next_line(5: "open_close_open.txt"): expected: "bbbbbbbbbb\n", got: "b\n"
+Error in test 2: get_next_line(5: "open_close_open.txt"): not enough memory allocated, needed: 12, reserved: 3
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_substr get_next_line_utils.c:104:4
+     in get_next_line get_next_line.c:42:20
+     in test_gnl_func file_utils.c:31:8
+     in main tester.c:163:2
+
+should reserve space for the string: "bbbbbbbbbb\n"
+Error in test 5: get_next_line(5: "open_close_open.txt"): expected: "bbbbbbbbbb\n", got: "b\n"
+Error in test 5: get_next_line(5: "open_close_open.txt"): not enough memory allocated, needed: 12, reserved: 3
+     in _add_malloc malloc_mock.c:29:8
+     in malloc malloc_mock.c:75:10
+  -> in ft_substr get_next_line_utils.c:104:4
+     in get_next_line get_next_line.c:42:20
+     in test_gnl_func file_utils.c:31:8
+     in main tester.c:163:2
+6   libdyld.dylib                       0x00007fff6103b3d5 start + 1
+
+should reserve space for the string: "bbbbbbbbbb\n"
+Error in test 6: get_next_line(5: "open_close_open.txt"): expected: "cccccccccc\n", got: "cc\n"
+Error in test 6: get_next_line(5: "open_close_open.txt"): not enough memory allocated, needed: 12, reserved: 4
+0   test2.out                           0x0000000101ae6297 _add_malloc + 791
+1   test2.out                           0x0000000101ae5f67 malloc + 311
+2   test2.out                           0x0000000101aece4b ft_substr + 219
+3   test2.out                           0x0000000101aec591 get_next_line + 257
+4   test2.out                           0x0000000101aebd91 test_gnl_func + 65
+5   test2.out                           0x0000000101ae49c1 main + 19825
+6   libdyld.dylib                       0x00007fff6103b3d5 start + 1
+
+should reserve space for the string: "cccccccccc\n"
+Error in test 7: get_next_line(5: "open_close_open.txt"): expected: "dddddddddd\n", got: "ddd\n"
+Error in test 7: get_next_line(5: "open_close_open.txt"): not enough memory allocated, needed: 12, reserved: 5
+0   test2.out                           0x0000000101ae6297 _add_malloc + 791
+1   test2.out                           0x0000000101ae5f67 malloc + 311
+2   test2.out                           0x0000000101aece4b ft_substr + 219
+3   test2.out                           0x0000000101aec591 get_next_line + 257
+4   test2.out                           0x0000000101aebd91 test_gnl_func + 65
+5   test2.out                           0x0000000101ae4a10 main + 19904
+6   libdyld.dylib                       0x00007fff6103b3d5 start + 1
+
+should reserve space for the string: "dddddddddd\n"
+Probable reason: You should clear the remaining buffer when a call to read returns -1
+##==##==##&&##==##==##./test2.out
+Error in test 1: get_next_line(5: "limits"): expected: "abcdefghi", got: "abcdefghiabcdefgh"
+asking for line: 1 of file:
+1: abcdefghi
+
+Error in test 5: get_next_line(5: "limits"): expected: "abcdefghij", got: "abcdefghijabcdefghi"
+asking for line: 1 of file:
+1: abcdefghij
+
+Error in test 9: get_next_line(5: "limits"): expected: "abcdefghijk", got: "abcdefghijkbcdefghij"
+asking for line: 1 of file:
+1: abcdefghijk
+
+Error in test 13: get_next_line(5: "limits"): expected: "abcdefghijklmnopqrs", got: "abcdefghijklmnopqrsjklmnopqr"
+asking for line: 1 of file:
+1: abcdefghijklmnopqrs
+
+Error in test 17: get_next_line(5: "limits"): expected: "abcdefghijklmnopqrst", got: "abcdefghijklmnopqrstklmnopqrs"
+asking for line: 1 of file:
+1: abcdefghijklmnopqrst
+
+Error in test 21: get_next_line(5: "limits"): expected: "abcdefghijklmnopqrstu", got: "abcdefghijklmnopqrstulmnopqrst"
+asking for line: 1 of file:
+1: abcdefghijklmnopqrstu
+
+Error in test 29: get_next_line(5: "limits"): expected: "klmnopqrst", got: "klmnopqrstklmnopqrs"
+asking for line: 2 of file:
+1: abcdefghi\n
+2: klmnopqrst
+
+Error in test 35: get_next_line(5: "limits"): expected: "lmnopqrs\n", got: <NULL>
+asking for line: 2 of file:
+1: abcdefghij\n
+2: lmnopqrs\n
+3: 
+
+Error in test 35: get_next_line(5: "limits"): not enough memory allocated, needed: 10, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "lmnopqrs\n"
+Error in test 38: get_next_line(5: "limits"): expected: "lmnopqrst", got: <NULL>
+asking for line: 2 of file:
+1: abcdefghij\n
+2: lmnopqrst
+
+Error in test 38: get_next_line(5: "limits"): not enough memory allocated, needed: 10, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "lmnopqrst"
+Error in test 41: get_next_line(5: "limits"): expected: "lmnopqrst\n", got: "\n"
+asking for line: 2 of file:
+1: abcdefghij\n
+2: lmnopqrst\n
+3: 
+
+Error in test 41: get_next_line(5: "limits"): not enough memory allocated, needed: 11, reserved: 2
+0   test2.out                           0x0000000101ae6297 _add_malloc + 791
+1   test2.out                           0x0000000101ae5f67 malloc + 311
+2   test2.out                           0x0000000101aece4b ft_substr + 219
+3   test2.out                           0x0000000101aec591 get_next_line + 257
+4   test2.out                           0x0000000101aec1a8 test_gnl_func_limits + 72
+5   test2.out                           0x0000000101ae523f main + 21999
+6   libdyld.dylib                       0x00007fff6103b3d5 start + 1
+
+should reserve space for the string: "lmnopqrst\n"
+##==##==##&&##==##==##./test2.out
+Error in test 2: get_next_line(0: "stdin"): expected: "012345678\n", got: "\n"
+Error in test 2: get_next_line(0: "stdin"): not enough memory allocated, needed: 11, reserved: 2
+0   test2.out                           0x0000000101ae6297 _add_malloc + 791
+1   test2.out                           0x0000000101ae5f67 malloc + 311
+2   test2.out                           0x0000000101aece4b ft_substr + 219
+3   test2.out                           0x0000000101aec591 get_next_line + 257
+4   test2.out                           0x0000000101aebd91 test_gnl_func + 65
+5   test2.out                           0x0000000101ae588c main + 23612
+6   libdyld.dylib                       0x00007fff6103b3d5 start + 1
+
+should reserve space for the string: "012345678\n"
+Error in test 3: get_next_line(0: "stdin"): expected: "90123456789\n", got: "89\n"
+Error in test 3: get_next_line(0: "stdin"): not enough memory allocated, needed: 13, reserved: 4
+0   test2.out                           0x0000000101ae6297 _add_malloc + 791
+1   test2.out                           0x0000000101ae5f67 malloc + 311
+2   test2.out                           0x0000000101aece4b ft_substr + 219
+3   test2.out                           0x0000000101aec591 get_next_line + 257
+4   test2.out                           0x0000000101aebd91 test_gnl_func + 65
+5   test2.out                           0x0000000101ae58d2 main + 23682
+6   libdyld.dylib                       0x00007fff6103b3d5 start + 1
+
+should reserve space for the string: "90123456789\n"
+Error in test 4: get_next_line(0: "stdin"): expected: "0123456789\n", got: "789\n"
+Error in test 4: get_next_line(0: "stdin"): not enough memory allocated, needed: 12, reserved: 5
+0   test2.out                           0x0000000101ae6297 _add_malloc + 791
+1   test2.out                           0x0000000101ae5f67 malloc + 311
+2   test2.out                           0x0000000101aece4b ft_substr + 219
+3   test2.out                           0x0000000101aec591 get_next_line + 257
+4   test2.out                           0x0000000101aebd91 test_gnl_func + 65
+5   test2.out                           0x0000000101ae5918 main + 23752
+6   libdyld.dylib                       0x00007fff6103b3d5 start + 1
+
+should reserve space for the string: "0123456789\n"
+Error in test 5: get_next_line(0: "stdin"): expected: "xxxx\n", got: <NULL>
+Error in test 5: get_next_line(0: "stdin"): not enough memory allocated, needed: 6, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "xxxx\n"
+##==##==##&&##==##==##./test2.out
+##==##==##&&##==##==##./test3.out
+##==##==##&&##==##==##./test3.out
+##==##==##&&##==##==##./test3.out
+##==##==##&&##==##==##./test3.out
+Error in test 1: get_next_line(5: "one_line_no_nl.txt"): expected: "abcdefghijklmnopqrstuvwxyz", got: "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxy"
+##==##==##&&##==##==##./test3.out
+##==##==##&&##==##==##./test3.out
+Error in test 2: get_next_line(5: "multiple_nl.txt"): expected: "\n", got: <NULL>
+Error in test 2: get_next_line(5: "multiple_nl.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 3: get_next_line(5: "multiple_nl.txt"): expected: "\n", got: <NULL>
+Error in test 3: get_next_line(5: "multiple_nl.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 4: get_next_line(5: "multiple_nl.txt"): expected: "\n", got: <NULL>
+Error in test 4: get_next_line(5: "multiple_nl.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 5: get_next_line(5: "multiple_nl.txt"): expected: "\n", got: <NULL>
+Error in test 5: get_next_line(5: "multiple_nl.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+##==##==##&&##==##==##./test3.out
+Error in test 2: get_next_line(5: "variable_nls.txt"): expected: "0123456789012345678901234567890123456789x2\n", got: <NULL>
+Error in test 2: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 44, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "0123456789012345678901234567890123456789x2\n"
+Error in test 3: get_next_line(5: "variable_nls.txt"): expected: "0123456789012345678901234567890123456789x3\n", got: <NULL>
+Error in test 3: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 44, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "0123456789012345678901234567890123456789x3\n"
+Error in test 4: get_next_line(5: "variable_nls.txt"): expected: "\n", got: <NULL>
+Error in test 4: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 5: get_next_line(5: "variable_nls.txt"): expected: "0123456789012345678901234567890123456789x5\n", got: <NULL>
+Error in test 5: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 44, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "0123456789012345678901234567890123456789x5\n"
+Error in test 6: get_next_line(5: "variable_nls.txt"): expected: "\n", got: <NULL>
+Error in test 6: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 7: get_next_line(5: "variable_nls.txt"): expected: "\n", got: <NULL>
+Error in test 7: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 8: get_next_line(5: "variable_nls.txt"): expected: "0123456789012345678901234567890123456789x8\n", got: <NULL>
+Error in test 8: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 44, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "0123456789012345678901234567890123456789x8\n"
+Error in test 9: get_next_line(5: "variable_nls.txt"): expected: "\n", got: <NULL>
+Error in test 9: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 10: get_next_line(5: "variable_nls.txt"): expected: "\n", got: <NULL>
+Error in test 10: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 11: get_next_line(5: "variable_nls.txt"): expected: "\n", got: <NULL>
+Error in test 11: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 2, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "\n"
+Error in test 12: get_next_line(5: "variable_nls.txt"): expected: "0123456789012345678901234567890123456789x12", got: <NULL>
+Error in test 12: get_next_line(5: "variable_nls.txt"): not enough memory allocated, needed: 44, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "0123456789012345678901234567890123456789x12"
+##==##==##&&##==##==##./test3.out
+Error in test 2: get_next_line(5: "lines_around_10.txt"): expected: "012345678\n", got: <NULL>
+Error in test 2: get_next_line(5: "lines_around_10.txt"): not enough memory allocated, needed: 11, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "012345678\n"
+Error in test 3: get_next_line(5: "lines_around_10.txt"): expected: "90123456789\n", got: <NULL>
+Error in test 3: get_next_line(5: "lines_around_10.txt"): not enough memory allocated, needed: 13, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "90123456789\n"
+Error in test 4: get_next_line(5: "lines_around_10.txt"): expected: "0123456789\n", got: <NULL>
+Error in test 4: get_next_line(5: "lines_around_10.txt"): not enough memory allocated, needed: 12, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "0123456789\n"
+Error in test 5: get_next_line(5: "lines_around_10.txt"): expected: "xxxx\n", got: <NULL>
+Error in test 5: get_next_line(5: "lines_around_10.txt"): not enough memory allocated, needed: 6, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "xxxx\n"
+##==##==##&&##==##==##./test3.out
+Error in test 1: get_next_line(5: "giant_line.txt"): expected: "01234567890123456789[...]01234567890123456789"(20000 characters), got: "01234567890123456789[...]90123456789012345678"(39999 characters)
+##==##==##&&##==##==##./test3.out
+Error in test 2: get_next_line(5: "giant_line_nl.txt"): expected: "another line!!!", got: <NULL>
+Error in test 2: get_next_line(5: "giant_line_nl.txt"): not enough memory allocated, needed: 16, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "another line!!!"
+##==##==##&&##==##==##./test3.out
+Error in test 2: get_next_line(5: "open_close_open.txt"): expected: "bbbbbbbbbb\n", got: <NULL>
+Error in test 2: get_next_line(5: "open_close_open.txt"): not enough memory allocated, needed: 12, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "bbbbbbbbbb\n"
+Error in test 5: get_next_line(5: "open_close_open.txt"): expected: "bbbbbbbbbb\n", got: <NULL>
+Error in test 5: get_next_line(5: "open_close_open.txt"): not enough memory allocated, needed: 12, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "bbbbbbbbbb\n"
+Error in test 6: get_next_line(5: "open_close_open.txt"): expected: "cccccccccc\n", got: <NULL>
+Error in test 6: get_next_line(5: "open_close_open.txt"): not enough memory allocated, needed: 12, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "cccccccccc\n"
+Error in test 7: get_next_line(5: "open_close_open.txt"): expected: "dddddddddd\n", got: <NULL>
+Error in test 7: get_next_line(5: "open_close_open.txt"): not enough memory allocated, needed: 12, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "dddddddddd\n"
+Probable reason: You should clear the remaining buffer when a call to read returns -1
+##==##==##&&##==##==##./test3.out
+Error in test 2: get_next_line(0: "stdin"): expected: "012345678\n", got: <NULL>
+Error in test 2: get_next_line(0: "stdin"): not enough memory allocated, needed: 11, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "012345678\n"
+Error in test 3: get_next_line(0: "stdin"): expected: "90123456789\n", got: <NULL>
+Error in test 3: get_next_line(0: "stdin"): not enough memory allocated, needed: 13, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "90123456789\n"
+Error in test 4: get_next_line(0: "stdin"): expected: "0123456789\n", got: <NULL>
+Error in test 4: get_next_line(0: "stdin"): not enough memory allocated, needed: 12, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "0123456789\n"
+Error in test 5: get_next_line(0: "stdin"): expected: "xxxx\n", got: <NULL>
+Error in test 5: get_next_line(0: "stdin"): not enough memory allocated, needed: 6, reserved: 0
+Could not find the corresponding allocation or the pointer 0x0
+should reserve space for the string: "xxxx\n"
+##==##==##&&##==##==##./test3.out
