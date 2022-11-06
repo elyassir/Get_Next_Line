@@ -113,3 +113,29 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	d[i] = '\0';
 	return (d);
 }
+
+// char	*ft_freebuff(char *s, unsigned int start)
+// {
+// 	char			*d;
+// 	size_t			i;
+// 	unsigned int	s_len;
+
+// 	i = 0;
+// 	if (!s)
+// 		return (NULL);
+// 	s_len = ft_strlen(s);
+// 	while (i + start < s_len)
+// 		i++;
+// 	d = malloc((i + 1) * sizeof(char ));
+// 	if (!d)
+// 		return (NULL);
+// 	i = 0;
+// 	while (i + start < s_len)
+// 	{
+// 		d[i] = s[start + i];
+// 		i++;
+// 	}
+// 	d[i] = '\0';
+// 	free(s);
+// 	return (d);
+// }

@@ -12,59 +12,58 @@
 
 #include "get_next_line.h"
 #include <fcntl.h>
-#include <stdio.h>
+//#include <stdio.h>
+
 
 char *get_next_line(int fd)
 {
-    static char *buff = NULL;
+    char *buff = NULL;
     static char tmp[BUFFER_SIZE + 1];
-    int i = 0;
+    int search = -1;
     int count2;
     int count = read(fd, tmp, BUFFER_SIZE);
-    if (count <= 0)
+    if (count <= 0 || fd < 0 || BUFFER_SIZE <= 0)
         return (NULL);
-    int stope = 1;
-    tmp[BUFFER_SIZE] = '\0';
-    if (buff != NULL)
+    //printf("%d\n", count);
+    if (!tmp[0])
         buff = ft_strjoin(buff, tmp);
-    else if (buff == NULL)
+    else // khawi
         buff = ft_strdup(tmp);
-    while (stope)
+    count2 = count;
+    while (count)
     {
-        i = ft_strchr(buff, '\n');
-        count += count2;
-        if (i != -1 || count2 == 0)
+        search = ft_strchr(buff, '\n');
+        if (search != -1 || count2 == 0)
         {
             char *s1;
-            printf("%d\n", count);
-            printf("%s\n", buff);
-            if (i == -1)
+            if (search == -1)
                 s1 = ft_substr(buff, 0, count - 1);
             else
-                s1 = ft_substr(buff, 0, i + 1);
-            buff = ft_substr(buff, i + 1, count - i + 1);
+                s1 = ft_substr(buff, 0, search + 1); /// mn 0 htal \n
+            //printf("count = %d || search = %d\n", count, search);
+            //printf("s1[0] = %d ,s1[1] = %d\n", s1[0], s1[1]);
+            free(buff);
             return (s1);
         }
+        count += count2;
         count2 = read(fd, tmp, BUFFER_SIZE);
-        if (count2 < 0)
+        if (count2 < 0) // there is nothing to read 
             return (NULL);
-        if (count != 0)
-            buff = ft_strjoin(buff, tmp);
-        printf("%s\n", buff);
+        buff = ft_strjoin(buff, tmp);
     }
 
     return (NULL);
 }
 
-int main()
-{
-    int fd = open("files/41_no_nl", O_RDWR);
+// int main()
+// {
+//     int fd = open("files/nl", O_RDWR);
 
-    printf("fd = %d\nline1 = |%s|\n", fd, get_next_line(fd));
-    printf("\n\n\n");
-    printf("line2 = %s\n", get_next_line(fd));
-//     printf("\n\n\n");
-//     printf("line3 = %s\n", get_next_line(fd));
-//     printf("\n\n\n");
-//     printf("line4 = %s\n", get_next_line(fd));
-}
+//     printf("line1 = |%s|\n", get_next_line(fd));
+//     printf("\n");
+//     printf("line2 = %s\n", get_next_line(fd));
+// //     printf("\n\n\n");
+// //     printf("line3 = %s\n", get_next_line(fd));
+// //     printf("\n\n\n");
+// //     printf("line4 = %s\n", get_next_line(fd));
+// }
