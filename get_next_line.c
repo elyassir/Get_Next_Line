@@ -17,43 +17,43 @@
 
 char *get_next_line(int fd)
 {
-    char *buff = NULL;
-    static char tmp[BUFFER_SIZE + 1];
+    char *line;
+    static char buffer[BUFFER_SIZE + 1];
     int search = -1;
     int count2;
-    int count = read(fd, tmp, BUFFER_SIZE);
+    int count = read(fd, buffer, BUFFER_SIZE);
     if (count <= 0 || fd < 0 || BUFFER_SIZE <= 0)
         return (NULL);
-    tmp[BUFFER_SIZE] = 0;
+    buffer[BUFFER_SIZE] = 0;
     //printf("%d\n", count);
-    //printf("%s\n", tmp);
-    if (!tmp[0])
-        buff = ft_strjoin(buff, tmp);
+    //printf("%s\n", buffer);
+    if (!buffer[0])
+        line = ft_strjoin(line, buffer);
     else // khawi
-        buff = ft_strdup(tmp);
+        line = ft_strdup(buffer);
     count2 = count;
     while (count)
     {
-        search = ft_strchr(buff, '\n');
+        search = ft_strchr(line, '\n');
         //printf("search = %d\n", search);
         if (search != -1 || count2 == 0)
         {
             char *s1;
             if (search == -1)
-                s1 = ft_substr(buff, 0, count - 1);
+                s1 = ft_substr(line, 0, count - 1);
             else
-                s1 = ft_substr(buff, 0, search + 1); /// mn 0 htal \n
+                s1 = ft_substr(line, 0, search + 1); /// mn 0 htal \n
             //printf("count = %d || search = %d\n", count, search);
             //printf("s1[0] = %d ,s1[1] = %d\n", s1[0], s1[1]);
-            free(buff);
+            free(line);
             return (s1);
         }
         count += count2;
-        count2 = read(fd, tmp, BUFFER_SIZE);
+        count2 = read(fd, buffer, BUFFER_SIZE);
         if (count2 < 0)
             return (NULL);
         if (count2 != 0)
-        buff = ft_strjoin(buff, tmp);
+        line = ft_strjoin(line, buffer);
     }
 
     return (NULL);
