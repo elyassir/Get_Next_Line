@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 20:02:53 by yel-mass          #+#    #+#             */
-/*   Updated: 2022/11/10 09:45:33 by yel-mass         ###   ########.fr       */
+/*   Created: 2022/11/09 14:21:04 by yel-mass          #+#    #+#             */
+/*   Updated: 2022/11/10 09:47:14 by yel-mass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <fcntl.h>
-#include <stdio.h>
+#include <limits.h>
 
 char	*ft_myread(int fd, char *buf)
 {
@@ -82,15 +81,15 @@ char	*ft_mynewbuffer(char *buf)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*buffer;
+	static char	*buffer[OPEN_MAX];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (ft_strchr(buffer, '\n') == -1)
-		buffer = ft_myread(fd, buffer);
-	if (buffer == NULL)
+	if (ft_strchr(buffer[fd], '\n') == -1)
+		buffer[fd] = ft_myread(fd, buffer[fd]);
+	if (buffer[fd] == NULL)
 		return (NULL);
-	line = ft_myline(buffer);
-	buffer = ft_mynewbuffer(buffer);
+	line = ft_myline(buffer[fd]);
+	buffer[fd] = ft_mynewbuffer(buffer[fd]);
 	return (line);
 }
